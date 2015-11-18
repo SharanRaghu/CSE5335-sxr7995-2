@@ -18,8 +18,8 @@ puts "--------------------------------------------------------------------------
 
 $i=0 
 while $i < 1 do 
-$name=result["artist"][$i][1] 
-$mbid=result["artist"][$i][2] 
+$name=result["similarartists"]["artist"][$i][0] 
+$mbid=result["similarartists"]["artist"][$i][1] 
 
 data.hset "row#{$i}","index",$i
 data.hset "row#{$i}","name", $name
