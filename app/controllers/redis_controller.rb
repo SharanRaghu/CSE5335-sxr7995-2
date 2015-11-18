@@ -4,7 +4,7 @@ require 'redis'
 
 quotes="'"
 
-data = Redis.new(:host => "ec2-54-83-9-36.compute-1.amazonaws.com", :port => 20399, :url => "redis://h:p5e5r42cp9oa9j1jk5s6fer4l25@ec2-54-83-9-36.compute-1.amazonaws.com:20399", :password => "p5e5r42cp9oa9j1jk5s6fer4l25") 
+data = Redis.new(:host => "ec2-54-83-9-36.compute-1.amazonaws.com", :port => 20409, :url => "redis://h:p5u8r65m6v6bp8ck1ms281tddss@ec2-54-83-9-36.compute-1.amazonaws.com:20409", :password => "p5u8r65m6v6bp8ck1ms281tddss") 
 
 
 #fetch from data sourse API and store in a variable 

@@ -8,9 +8,9 @@ require 'mongo'
 include Mongo
 
 i = 0
-var = 0
+count = 0
 
-db = Mongo::Client.new([ 'ds053964.mongolab.com:53964' ], :database => 'heroku_qksst9vt', :user => 'sharan', :password => 'sharan')
+database = Mongo::Client.new([ 'ds055584.mongolab.com:55584' ], :database => 'heroku_qwfkrl8f', :user => 'sharan', :password => 'sharan')
 puts '-------------------------------------------------------------------------------------------------------------------------'
 while i < 1  do
 	#DATA SOURCE: http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=editors&api_key=4d7847876fa96f67f881aaf1b73e0e30&format=json 
@@ -19,33 +19,33 @@ while i < 1  do
       # iterate through the Array of returned artists and print their names                                                                                 
         data["similarartists"]["artist"].each do |artist|
         
-        insertintable = db[:heroku_qksst9vt].insert_one({ID: var.to_s, Title: artist["name"]})
+        insertintable = database[:heroku_qwfkrl8f].insert_one({ID: count.to_s, Title: artist["name"]})
         
-        var = var + 1;
+        count = count + 1;
       end
 
     i = i + 1;
 end
 puts '****************************************************************************************************************'
 
-puts "Total Data Entries = #{var}"
+puts "Total Data Entries = #{count}"
 
 puts '****************************************************************************************************************'
 
 puts "QUERIES !! "
 puts 'Primary key value Query is as follows:'
-db[:heroku_qksst9vt].find(:ID => '10').each {|document| puts document }
+database[:heroku_qwfkrl8f].find(:ID => '10').each {|document| puts document }
 
 puts '****************************************************************************************************************'
 
 puts 'Non Primary key value Query is as follows:'
-db[:heroku_qksst9vt].find(:Title => 'Interpol').each {|document| puts document }
+database[:heroku_qwfkrl8f].find(:Title => 'Interpol').each {|document| puts document }
 
 puts '****************************************************************************************************************'
 
 puts "Enter the Artist name:";
 $name=gets
-db[:heroku_qksst9vt].find(:Title => $name).each {|document| puts document }
+database[:heroku_qwfkrl8f].find(:Title => $name).each {|document| puts document }
 
 puts ($document)
 

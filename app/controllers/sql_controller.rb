@@ -11,7 +11,7 @@ begin
 puts "----------------------------------------------------------------------------------------"
     
     #Reference: http://www.rubydoc.info/gems/pg/0.11.0/PGconn  
-    db = PGconn.open(:host => 'ec2-54-83-51-38.compute-1.amazonaws.com', :dbname => 'darbba93t54jqv', :user=> 'xclpassmmbbbev', :password=> 'd_cLyDB_TqYRKFgKNeYnEneEb8')
+    db = PGconn.open(:host => 'ec2-54-83-53-120.compute-1.amazonaws.com', :dbname => 'decsfihbnvrb8b', :user=> 'jqztcloyubtgeg', :password=> 'X6bVMcCBSZxmo2ufZYDAKC290U')
     
     db.exec "CREATE TABLE IF NOT EXISTS SongAlbum(ArtistId INTEGER PRIMARY KEY, Artist TEXT)"
     db.exec "DELETE FROM SongAlbum"
