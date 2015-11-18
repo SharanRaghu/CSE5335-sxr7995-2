@@ -17,9 +17,9 @@ result["similarartists"]["artist"].each do |artist|
 puts "------------------------------------------------------------------------------------"
 
 $i=0 
-while $i < 100 do 
-$name=result["similarartists"]["artist"][$i][1] 
-$mbid=result["similarartists"]["artist"][$i][2] 
+while $i < 1 do 
+$name=result["artist"][$i][1] 
+$mbid=result["artist"][$i][2] 
 
 data.hset "row#{$i}","index",$i
 data.hset "row#{$i}","name", $name
